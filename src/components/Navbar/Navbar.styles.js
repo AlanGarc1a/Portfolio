@@ -1,8 +1,9 @@
 import styled from 'styled-components'
 import { NavLink } from 'react-router-dom';
+import { BiMenuAltRight } from 'react-icons/bi';
 
 export const NavContainer = styled.div`
-   padding: 2rem 4rem 0rem 4rem;
+   padding: 2rem;
 `
 
 export const Nav = styled.nav`
@@ -14,10 +15,25 @@ export const NavLogo = styled.div`
     font-size: 2.5rem;
     font-weight: 700;
     color: var(--white);
+
+    @media only screen and (max-width: 30em) {
+        display: none;
+    }
 `
 
 export const NavLogoTitle = styled.span`
     color: var(--slate);
+`
+
+export const NavAG = styled.span`
+    display: none;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--white);
+
+    @media only screen and (max-width: 30em) {
+        display: block;
+    }
 `
 
 export const NavItem = styled.div`
@@ -34,6 +50,10 @@ export const NavListItem = styled.li`
     
     &:not(:last-child) {
         margin-right: 2rem;
+    }
+
+    @media only screen and (max-width: 30em) {
+        display: none;
     }
  `
 
@@ -59,5 +79,15 @@ export const NavItemResume = styled.a`
     border-radius: 0.3rem;
     &:visited {
         color: var(--white);
+    }
+`;
+
+export const NavMenu = styled(BiMenuAltRight)`
+    display: none;
+    font-size: 5rem;
+    color: var(--slate);
+
+    @media only screen and (max-width: 30em) {
+        display: block;
     }
 `;
