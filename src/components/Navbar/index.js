@@ -8,11 +8,13 @@ import {
     NavListItem,
     NavLogo,
     NavLogoTitle,
-    NavItemResume
+    NavItemResume,
+    NavAG,
+    NavMenu
 } from './Navbar.styles';
 import Resume from '../../assets/resume.pdf';
 
-const Navbar = () => {
+const Navbar = ({ toggle }) => {
 
     const navlinks = [
         { url: '/', title: 'Home' },
@@ -28,6 +30,10 @@ const Navbar = () => {
                     <NavLogoTitle>Alan </NavLogoTitle>
                     Garcia
                 </NavLogo>
+                <NavAG>
+                    <NavLogoTitle>A</NavLogoTitle>
+                    G
+                </NavAG>
                 <NavItem>
                     <NavList>
                         {navlinks.map(link => {
@@ -41,6 +47,7 @@ const Navbar = () => {
                             <NavItemResume href={Resume} target="_blank">Resume</NavItemResume>
                         </NavListItem>
                     </NavList>
+                    <NavMenu onClick={toggle} />
                 </NavItem>
             </Nav>
         </NavContainer>
