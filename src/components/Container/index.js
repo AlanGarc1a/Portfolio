@@ -1,4 +1,20 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const fadeUp = keyframes`
+    0% {
+        opacity: 0;
+        transform: translateY(-10rem);
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+        transfrom: translateY(0rem);
+    }
+`;
 
 const Wrapper = styled.div`
     max-width: 160rem;
@@ -6,6 +22,7 @@ const Wrapper = styled.div`
     padding-left: 3rem;
     padding-right: 3rem;
     margin-top: 15rem;
+    animation: ${fadeUp} 1s ease-in;
 `;
 
 const Container = ({ children }) => {
