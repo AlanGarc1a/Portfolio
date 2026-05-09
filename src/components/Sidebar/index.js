@@ -8,7 +8,7 @@ import {
   SideMenuInner,
   SideMenuItem,
 } from "./Sidebar.styles";
-import Resume from "../../assets/Resume.pdf";
+import Resume from "../../assets/resume.pdf";
 
 const Sidebar = ({ isOpen, toggle }) => {
   const navlinks = [
