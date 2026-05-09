@@ -12,7 +12,7 @@ import {
   NavAG,
   NavMenu,
 } from "./Navbar.styles";
-import Resume from "../../assets/Resume.pdf";
+import Resume from "../../assets/resume.pdf";
 
 const Navbar = ({ toggle }) => {
   const navlinks = [
